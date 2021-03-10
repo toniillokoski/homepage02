@@ -1,3 +1,8 @@
+$snap: cubic-bezier(1.000, 0.005, 0.240, 1.000);
+$bounce: cubic-bezier(0.175, 0.885, 0.320, 1.275);
+$main: rgb(207, 91, 57);
+
+
 * {
     padding: 0;
     margin: 0;
@@ -6,20 +11,127 @@
     font-size: 30px;
 }
 
-body {
-    width: 100vw;
+body { 
     height: 100vh;
-    display: flex;
-    background: rgb(224, 224, 224);
-    flex-direction: column;
-    align-items: center;   
+    overflow: hidden;
+
+    .page {
+        height: 100%;
+        background-color: brown;
+
+        .menu_toggle {
+            z-index: 900;
+            position: fixed;
+            top: 0;
+            left: 0;
+            display: block;
+            cursor: pointer;
+            width: 100px;
+            height: 80px;
+            background-color: $main;
+            border-bottom-right-radius: 100%;
+            
+            &:active {
+              i {
+                opacity: 0.8
+              }
+            }  
+            i {
+              color: white;
+            }
+            .menu_open,
+            .menu_close {
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              margin-top: -15px;
+              margin-left: -12px;
+              transition: transform .7s $snap;
+            }
+            .menu_open {
+              transform-origin: -100px -100px;
+            }
+            .menu_close {
+              transform: rotate(20deg);
+              transform-origin: -100px -160px;
+            }
+          }
+          .menu_items {
+            position: fixed;
+            bottom: 0;
+            left: 50px;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            
+            li {
+              height: 60px;
+              margin-bottom: 40px;
+              transform: translateX(-375px);
+              margin-left: 25px;
+              transition: transform .7s 0s $snap;
+              
+              &:nth-child(2){
+                margin-left: 75px;
+              }
+              &:nth-child(3){
+                margin-left: 125px;
+              }
+            }
+            a {
+              display: block;
+              text-decoration: none;
+              text-transform: uppercase;
+              letter-spacing: 2px;
+              color: darken(white, 30%);
+              transition: color .2s;
+              
+              .icon {
+                position: relative;
+                display: inline-block;
+                margin-right: 45px;
+                color: white;
+                vertical-align: middle;
+          
+                &:after {
+                  position: absolute;
+                  top: 50%;
+                  left: 50%;
+                  content: '';
+                  display: block;
+                  width: 60px;
+                  height: 60px;
+                  margin-left: -33px;
+                  margin-top: -32px;
+                  border-radius: 100%;
+                  border: 2px solid white;
+                  transition: border-color .2s;
+                }
+              }
+              
+              &:hover {
+                color: white;
+                .icon {
+                  &:after {
+                    border-color: red;
+                  }
+                }
+              }
+              &:active {
+                .icon {
+                  color: red;
+                }
+              }
+            }
+          }
+
     
     header {
         display: flex;
         flex-direction: column;
         align-items: center;
-        height: 10rem;
-        
+        margin-bottom: 1rem;
+
         .container {
             height: 8rem;
             width: 20rem;
@@ -42,15 +154,70 @@ body {
         .textrotate {
             text-align: center;
             position: relative;
-            top: -2rem;
+            top: -1rem;
             h2 {
                 font-size: 1rem;
                 span {
-                    color: rgb(207, 91, 57);
+                    color: $main;
                     display: none;
                     font-size: 1.3rem;
                 }
             } 
         }
     }
+}
+
+
+
+    .content {
+        // essential
+        height: 200%; // make higher or you'll see background when rotated
+        transform-origin: top left;
+        transition: transform .7s $snap;
+        
+        // styling
+        background-color: white;
+
+
+      }
+      .content_inner {
+        // essential
+        height: 50%; // compensate for higher .content
+        overflow-y: auto; // set expected overflow
+        
+        // styling
+        padding: 50px 20%;
+      }
+
+
+
+      
+      
+      /* Let's open up the menu */
+      .shazam {
+        .content {
+          transform: rotate(-30deg);
+        }
+        
+        .menu_open {
+          transform: rotate(-20deg);
+        }
+        .menu_close {
+          transform: rotate(0);
+        }
+        
+        .menu_items {
+          li {
+            transform: translateX(0);
+            transition: transform .35s .45s $bounce;
+          
+            &:nth-child(2){
+              transition-delay: .47s;
+            }
+            &:nth-child(3){
+              transition-delay: .48s;
+            }
+          }
+        }
+      }
 }

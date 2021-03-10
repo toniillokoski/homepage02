@@ -9,3 +9,14 @@ function rotator(){
     word[i].style.display = 'initial';
 }
 setInterval(rotator, 900);
+
+
+// elements
+var $page = $('.page');
+
+$('.menu_toggle').on('click', function(){
+  $page.toggleClass('shazam');
+});
+$('.content').on('click', function(){
+  $page.removeClass('shazam');
+});

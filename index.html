@@ -5,39 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Homepageproject</title>
     <link rel="stylesheet" href="/styles/styles.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
+
     <link href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <header>
-        <div class="container">
-            <div class="name">john doe</div>
-        </div>
-
-        <div class="textrotate">
-            <h2 id="text">
-                My websites are <br>
-                <span style="display: initial;">Unique</span>
-                <span>Cool</span>
-                <span>Awesome</span>
-                <span>Amazing</span>
-                <span>Perfect</span>
-            </h2>
-        </div>
-    </header>
-
-    <section>
-        <ul>
-            <li><a href="#" data-text="Home"></a></li>
-            <li><a href="#" data-text="Home"></a></li>
-            <li><a href="#" data-text="Home"></a></li>
-            <li><a href="#" data-text="Home"></a></li>
+    <div class="page">
+        <span class="menu_toggle">
+          <i class="menu_open"></i>
+          <i class="menu_close"></i>
+        </span>
+        <ul class="menu_items">
+          <li><a href="#"><i class="icon"></i>Services</a></li>
+          <li><a href="#"><i class="icon"></i>About</a></li>
+          <li><a href="#"><i class="icon"></i>Contact</a></li>
         </ul>
-    </section>
 
 
+        <main class="content">
+            <div class="content_inner">
+                <header>
+                    <div class="container">
+                        <div class="name">john doe</div>
+                    </div>
+
+                    <div class="textrotate">
+                        <h2 id="text">
+                            My websites are <br>
+                            <span style="display: initial;">Unique</span>
+                            <span>Cool</span>
+                            <span>Awesome</span>
+                            <span>Amazing</span>
+                            <span>Perfect</span>
+                        </h2>
+                    </div>
+                </header>
+            </div>
+        </main>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-1.12.3.js" integrity="sha256-1XMpEtA4eKXNNpXcJ1pmMPs8JV+nwLdEqwiJeCQEkyc=" crossorigin="anonymous"></script>
     <script src="/main.js"></script>
 </body>
 </html>

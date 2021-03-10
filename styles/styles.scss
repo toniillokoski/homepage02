@@ -3,6 +3,7 @@ $bounce: cubic-bezier(0.175, 0.885, 0.320, 1.275);
 
 $main: rgb(207, 91, 57);
 $background: rgb(234, 234, 234);
+$darkermain: rgb(54, 54, 54);
 
 
 * {
@@ -19,7 +20,7 @@ body {
 
     .page {
         height: 100%;
-        background-color: brown;
+        background-color: $darkermain;
 
         .menu_toggle {
             z-index: 900;

@@ -2,7 +2,7 @@ $snap: cubic-bezier(1.000, 0.005, 0.240, 1.000);
 $bounce: cubic-bezier(0.175, 0.885, 0.320, 1.275);
 
 $main: rgb(207, 91, 57);
-$background: rgb(234, 234, 234);
+$background: rgb(181, 181, 181);
 $darkermain: rgb(54, 54, 54);
 
 
@@ -17,10 +17,13 @@ $darkermain: rgb(54, 54, 54);
 body { 
     height: 100vh;
     overflow: hidden;
+    background: transparent;
+    background: $darkermain;
+
 
     .page {
         height: 100%;
-        background-color: $darkermain;
+        background: $darkermain;
 
         .menu_toggle {
             z-index: 900;
@@ -44,8 +47,8 @@ body {
                 height: 65px;
                 cursor: pointer;
                 transition: all .5s ease-in-out;
-                top: 18%;
-                left: 18%;
+                top: 15%;
+                left: 15%;
 
                 .menu-btn_burger {
                     width: 50px;
@@ -120,7 +123,7 @@ body {
                 text-decoration: none;
                 text-transform: uppercase;
                 letter-spacing: 2px;
-                color: darken(white, 30%);
+                color: darken(white, 40%);
                 transition: color .2s;
                 
                 .icon {
@@ -160,7 +163,7 @@ body {
 
                     .icon {
                         &:after {
-                        border-color: red;
+                        border-color: $main;
                         }
                     }
                 }
@@ -179,7 +182,7 @@ body {
             background-color: white;
 
             .content_inner {
-                height: 50%; // Compensate for higher .content
+                height: 100%; // Compensate for higher .content
                 overflow-y: auto;
                 padding: 50px 20%;
 
@@ -223,6 +226,18 @@ body {
                                 font-size: 1.3rem;
                             }
                         } 
+                    }
+                    .image_container {
+                        display: flex;
+                        justify-content: center;
+                        
+                        #moon {
+                            width: 700px;
+                            top: -320px;
+                            position: absolute;
+                            transform: rotate(90deg);
+                            background: transparent;
+                        }
                     }
                 }
             }

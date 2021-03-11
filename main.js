@@ -1,3 +1,4 @@
+// TEKSTI ROTAATIO
 var text = document.getElementById("text");
 var word = text.getElementsByTagName("span");
 
@@ -11,7 +12,7 @@ function rotator(){
 setInterval(rotator, 900);
 
 
-// elements
+// SIVU MENU ANIMAATIO
 var $page = $('.page');
 
 $('.menu_toggle').on('click', function(){
@@ -19,4 +20,20 @@ $('.menu_toggle').on('click', function(){
 });
 $('.content').on('click', function(){
   $page.removeClass('shazam');
+});
+
+
+// HAMBURGER
+const menuBtn = document.querySelector('.menu-btn');
+
+let menuOpen = false;
+
+menuBtn.addEventListener('click', () => {
+    if(!menuOpen) {
+        menuBtn.classList.add('open');
+        menuOpen = true;
+    } else {
+        menuBtn.classList.remove('open');
+        menuOpen = false;
+    }
 });

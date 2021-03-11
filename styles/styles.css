@@ -26,9 +26,86 @@ body .page .menu_toggle {
   display: block;
   cursor: pointer;
   width: 100px;
-  height: 80px;
+  height: 100px;
   background-color: #cf5b39;
   border-bottom-right-radius: 100%;
+  /* UUS NAPPI?? */
+  /* ANIMATION */
+  /* UUS NAPPI LOPPUU */
+  /* VANHAT CSS */
+  /* VANHAT CSS */
+}
+
+body .page .menu_toggle .menu-btn {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+  /* border: 3px solid #fff; */
+}
+
+body .page .menu_toggle .menu-btn__burger {
+  width: 50px;
+  height: 6px;
+  background: #fff;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+          box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+
+body .page .menu_toggle .menu-btn__burger::before,
+body .page .menu_toggle .menu-btn__burger::after {
+  content: '';
+  position: absolute;
+  width: 50px;
+  height: 6px;
+  background: #fff;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+          box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+
+body .page .menu_toggle .menu-btn__burger::before {
+  -webkit-transform: translateY(-16px);
+          transform: translateY(-16px);
+}
+
+body .page .menu_toggle .menu-btn__burger::after {
+  -webkit-transform: translateY(16px);
+          transform: translateY(16px);
+}
+
+body .page .menu_toggle .menu-btn.open .menu-btn__burger {
+  -webkit-transform: translateX(-50px);
+          transform: translateX(-50px);
+  background: transparent;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+body .page .menu_toggle .menu-btn.open .menu-btn__burger::before {
+  -webkit-transform: rotate(45deg) translate(35px, -35px);
+          transform: rotate(45deg) translate(35px, -35px);
+}
+
+body .page .menu_toggle .menu-btn.open .menu-btn__burger::after {
+  -webkit-transform: rotate(-45deg) translate(35px, 35px);
+          transform: rotate(-45deg) translate(35px, 35px);
 }
 
 body .page .menu_toggle:active i {
@@ -39,12 +116,16 @@ body .page .menu_toggle i {
   color: white;
 }
 
+body .page .menu_toggle i .material-icons.md-48 {
+  font-size: 48px;
+}
+
 body .page .menu_toggle .menu_open, body .page .menu_toggle .menu_close {
   position: absolute;
   top: 50%;
   left: 50%;
-  margin-top: -15px;
-  margin-left: -12px;
+  margin-top: -30px;
+  margin-left: -30px;
   -webkit-transition: -webkit-transform 0.7s cubic-bezier(1, 0.005, 0.24, 1);
   transition: -webkit-transform 0.7s cubic-bezier(1, 0.005, 0.24, 1);
   transition: transform 0.7s cubic-bezier(1, 0.005, 0.24, 1);
@@ -52,8 +133,8 @@ body .page .menu_toggle .menu_open, body .page .menu_toggle .menu_close {
 }
 
 body .page .menu_toggle .menu_open {
-  -webkit-transform-origin: -100px -100px;
-          transform-origin: -100px -100px;
+  -webkit-transform-origin: -150px -100px;
+          transform-origin: -150px -100px;
 }
 
 body .page .menu_toggle .menu_close {

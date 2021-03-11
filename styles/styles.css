@@ -282,6 +282,47 @@ body .page .content .content_inner header .image_container #moon {
   background: transparent;
 }
 
+body .page .content .content_inner header .rocket_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+body .page .content .content_inner header .rocket_container #rocket {
+  position: relative;
+  right: -350px;
+  top: -350px;
+  -webkit-animation: animate 0.2s ease infinite;
+          animation: animate 0.2s ease infinite;
+}
+
+@-webkit-keyframes animate {
+  0%, 100% {
+    -webkit-transform: translateY(-2px);
+            transform: translateY(-2px);
+  }
+  50% {
+    -webkit-transform: translateY(2px);
+            transform: translateY(2px);
+  }
+}
+
+@keyframes animate {
+  0%, 100% {
+    -webkit-transform: translateY(-2px);
+            transform: translateY(-2px);
+  }
+  50% {
+    -webkit-transform: translateY(2px);
+            transform: translateY(2px);
+  }
+}
+
 body .shazam .content {
   -webkit-transform: rotate(-30deg);
           transform: rotate(-30deg);

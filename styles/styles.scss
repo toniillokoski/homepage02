@@ -239,6 +239,28 @@ body {
                             background: transparent;
                         }
                     }
+
+                    .rocket_container {
+                        display: flex;
+                        justify-content: center;
+                        transform: rotate(45deg);
+
+                        #rocket {
+                            position: relative;
+                            right: -350px;
+                            top: -350px;
+                            animation: animate 0.2s ease infinite;
+
+                        @keyframes animate {
+                            0%,100% {
+                                transform: translateY(-2px);
+                            }
+                            50% {
+                                transform: translateY(2px);
+                            }
+                        }
+                        }
+                    }
                 }
             }
         }

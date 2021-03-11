@@ -25,15 +25,12 @@ body .page .menu_toggle {
   left: 0;
   display: block;
   cursor: pointer;
-  width: 100px;
-  height: 100px;
+  width: 120px;
+  height: 120px;
   background-color: #cf5b39;
   border-bottom-right-radius: 100%;
-  /* UUS NAPPI?? */
+  /* UUS MENUNAPPI */
   /* ANIMATION */
-  /* UUS NAPPI LOPPUU */
-  /* VANHAT CSS */
-  /* VANHAT CSS */
 }
 
 body .page .menu_toggle .menu-btn {
@@ -47,15 +44,16 @@ body .page .menu_toggle .menu-btn {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 80px;
-  height: 80px;
+  width: 65px;
+  height: 65px;
   cursor: pointer;
   -webkit-transition: all .5s ease-in-out;
   transition: all .5s ease-in-out;
-  /* border: 3px solid #fff; */
+  top: 18%;
+  left: 18%;
 }
 
-body .page .menu_toggle .menu-btn__burger {
+body .page .menu_toggle .menu-btn .menu-btn_burger {
   width: 50px;
   height: 6px;
   background: #fff;
@@ -66,8 +64,7 @@ body .page .menu_toggle .menu-btn__burger {
   transition: all .5s ease-in-out;
 }
 
-body .page .menu_toggle .menu-btn__burger::before,
-body .page .menu_toggle .menu-btn__burger::after {
+body .page .menu_toggle .menu-btn .menu-btn_burger::before, body .page .menu_toggle .menu-btn .menu-btn_burger::after {
   content: '';
   position: absolute;
   width: 50px;
@@ -80,17 +77,17 @@ body .page .menu_toggle .menu-btn__burger::after {
   transition: all .5s ease-in-out;
 }
 
-body .page .menu_toggle .menu-btn__burger::before {
+body .page .menu_toggle .menu-btn .menu-btn_burger::before {
   -webkit-transform: translateY(-16px);
           transform: translateY(-16px);
 }
 
-body .page .menu_toggle .menu-btn__burger::after {
+body .page .menu_toggle .menu-btn .menu-btn_burger::after {
   -webkit-transform: translateY(16px);
           transform: translateY(16px);
 }
 
-body .page .menu_toggle .menu-btn.open .menu-btn__burger {
+body .page .menu_toggle .menu-btn.open .menu-btn_burger {
   -webkit-transform: translateX(-50px);
           transform: translateX(-50px);
   background: transparent;
@@ -98,50 +95,14 @@ body .page .menu_toggle .menu-btn.open .menu-btn__burger {
           box-shadow: none;
 }
 
-body .page .menu_toggle .menu-btn.open .menu-btn__burger::before {
+body .page .menu_toggle .menu-btn.open .menu-btn_burger::before {
   -webkit-transform: rotate(45deg) translate(35px, -35px);
           transform: rotate(45deg) translate(35px, -35px);
 }
 
-body .page .menu_toggle .menu-btn.open .menu-btn__burger::after {
+body .page .menu_toggle .menu-btn.open .menu-btn_burger::after {
   -webkit-transform: rotate(-45deg) translate(35px, 35px);
           transform: rotate(-45deg) translate(35px, 35px);
-}
-
-body .page .menu_toggle:active i {
-  opacity: 0.8;
-}
-
-body .page .menu_toggle i {
-  color: white;
-}
-
-body .page .menu_toggle i .material-icons.md-48 {
-  font-size: 48px;
-}
-
-body .page .menu_toggle .menu_open, body .page .menu_toggle .menu_close {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-top: -30px;
-  margin-left: -30px;
-  -webkit-transition: -webkit-transform 0.7s cubic-bezier(1, 0.005, 0.24, 1);
-  transition: -webkit-transform 0.7s cubic-bezier(1, 0.005, 0.24, 1);
-  transition: transform 0.7s cubic-bezier(1, 0.005, 0.24, 1);
-  transition: transform 0.7s cubic-bezier(1, 0.005, 0.24, 1), -webkit-transform 0.7s cubic-bezier(1, 0.005, 0.24, 1);
-}
-
-body .page .menu_toggle .menu_open {
-  -webkit-transform-origin: -150px -100px;
-          transform-origin: -150px -100px;
-}
-
-body .page .menu_toggle .menu_close {
-  -webkit-transform: rotate(20deg);
-          transform: rotate(20deg);
-  -webkit-transform-origin: -100px -160px;
-          transform-origin: -100px -160px;
 }
 
 body .page .menu_items {
@@ -155,9 +116,9 @@ body .page .menu_items {
 
 body .page .menu_items li {
   height: 60px;
-  margin-bottom: 40px;
-  -webkit-transform: translateX(-400px);
-          transform: translateX(-400px);
+  margin-bottom: 50px;
+  -webkit-transform: translateX(-450px);
+          transform: translateX(-450px);
   margin-left: 25px;
   -webkit-transition: -webkit-transform 0.7s 0s cubic-bezier(1, 0.005, 0.24, 1);
   transition: -webkit-transform 0.7s 0s cubic-bezier(1, 0.005, 0.24, 1);
@@ -186,9 +147,13 @@ body .page .menu_items a {
 body .page .menu_items a .icon {
   position: relative;
   display: inline-block;
-  margin-right: 45px;
+  margin-right: 40px;
   color: white;
   vertical-align: middle;
+}
+
+body .page .menu_items a .icon::before {
+  display: none;
 }
 
 body .page .menu_items a .icon:after {
@@ -207,6 +172,11 @@ body .page .menu_items a .icon:after {
   transition: border-color .2s;
 }
 
+body .page .menu_items a .icon span {
+  vertical-align: middle;
+  font-size: 36px;
+}
+
 body .page .menu_items a:hover {
   color: white;
 }
@@ -220,7 +190,7 @@ body .page .menu_items a:active .icon {
 }
 
 body .page .content {
-  height: 200%;
+  height: 140%;
   -webkit-transform-origin: top left;
           transform-origin: top left;
   -webkit-transition: -webkit-transform 0.7s cubic-bezier(1, 0.005, 0.24, 1);

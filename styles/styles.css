@@ -307,8 +307,8 @@ body .page .content .content_inner header .rocket_container #rocket {
             transform: translateY(-2px);
   }
   50% {
-    -webkit-transform: translateY(2px);
-            transform: translateY(2px);
+    -webkit-transform: translateX(2px);
+            transform: translateX(2px);
   }
 }
 
@@ -318,8 +318,8 @@ body .page .content .content_inner header .rocket_container #rocket {
             transform: translateY(-2px);
   }
   50% {
-    -webkit-transform: translateY(2px);
-            transform: translateY(2px);
+    -webkit-transform: translateX(2px);
+            transform: translateX(2px);
   }
 }
 
@@ -356,4 +356,10 @@ body .shazam .menu_items li:nth-child(3) {
   -webkit-transition-delay: .48s;
           transition-delay: .48s;
 }
+
+/* ------------
+
+NEW SHARE NAV BUBBLE HERE
+
+-------------- */
 /*# sourceMappingURL=styles.css.map */

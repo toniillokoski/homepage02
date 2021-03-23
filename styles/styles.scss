@@ -5,7 +5,7 @@ $main: rgb(207, 91, 57);
 $background: rgb(181, 181, 181);
 $darkermain: rgb(54, 54, 54);
 
-$desktop: 1500px;
+$desktop: 1200px;
 
 @mixin desktop {
     @media (max-width: #{$desktop}) {
@@ -39,7 +39,7 @@ body {
 
         .small::before {
             @include desktop() {
-                content:     "Please come back with bigger screen";
+                content:     "This is not responsive yet";
                 font-size: 2rem;
                 color: rgb(234, 234, 234);
             }
@@ -262,7 +262,7 @@ body {
                         justify-content: center;
                         
                         #moon {
-                            width: 700px;
+                            width: 23rem;
                             top: -320px;
                             position: absolute;
                             transform: rotate(90deg);
@@ -293,8 +293,8 @@ body {
                     }
                     .social {
                         position: relative;
-                        top: -100px;
-                        left: 550px;
+                        top: -3rem;
+                        left: 15rem;
                     
                         ul {
                             position: relative;

@@ -29,9 +29,9 @@ body .smalls {
   display: flex;
 }
 
-@media (max-width: 1500px) {
+@media (max-width: 1200px) {
   body .smalls .small::before {
-    content: "Please come back with bigger screen";
+    content: "This is not responsive yet";
     font-size: 2rem;
     color: #eaeaea;
   }
@@ -42,7 +42,7 @@ body .page {
   background: #363636;
 }
 
-@media (max-width: 1500px) {
+@media (max-width: 1200px) {
   body .page {
     display: none;
   }
@@ -302,7 +302,7 @@ body .page .content .content_inner header .image_container {
 }
 
 body .page .content .content_inner header .image_container #moon {
-  width: 700px;
+  width: 23rem;
   top: -320px;
   position: absolute;
   -webkit-transform: rotate(90deg);
@@ -353,8 +353,8 @@ body .page .content .content_inner header .rocket_container #rocket {
 
 body .page .content .content_inner header .social {
   position: relative;
-  top: -100px;
-  left: 550px;
+  top: -3rem;
+  left: 15rem;
 }
 
 body .page .content .content_inner header .social ul {
